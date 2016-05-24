@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>CPTC</title>
+
+        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/materialize.min.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+        <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper persimmon">
+                    <span class="  hide-on-small-only">
+                        <a href="#!" class="brand-logo header-rit"></a>
+                    </span>
+                    <span class="hide-on-med-and-up">
+                        <a href="#!" class="header-title">Collegiate Pentesting Competition</a>
+                    </span>
+
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars hamburger" aria-hidden="true"></i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#" class="scrollHome">Home</a></li>
+                        <li><a href="#" class="scrollAbout">About</a></li>
+                        <li><a href="#" class="scrollSponsors">Sponsors</a></li>
+                        <li><a href="#" class="scrollFAQ">FAQ</a></li>
+                        <li><a href="#" class="scrollResources">Resources</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        <li><a href="#" class="scrollHome">Home</a></li>
+                        <li><a href="#" class="scrollAbout">About</a></li>
+                        <li><a href="#" class="scrollSponsors">Sponsors</a></li>
+                        <li><a href="#" class="scrollFAQ">FAQ</a></li>
+                        <li><a href="#" class="scrollResources">Resources</a></li>
+                    </ul>                
+                </div>
+            </nav>
+        </div>
+
+        <div class="container container-main">
+
+            <section class="panel home">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 clearfix">
+                            <h1>The <strong>Second</strong> Inter-Collegiate Penetration Testing Competition</h1>
+
+                            <a class="waves-effect waves-light btn-primary">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel about">
+                <div class="container">
+                    <div class="row"> 
+                        <div class="col s12 clearfix">
+                            <h1>About</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel sponsors">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 clearfix">
+                            <h1>Sponsors</h1>
+
+                            <div class="become-sponsor">
+                                <h2>Becoming a Sponsor</h2>
+                                
+                                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                                <a class="waves-effect waves-light btn-secondary">Sponsor</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>                        
+
+            <section class="panel faq">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 clearfix">
+                            <h1>FAQ</h1>
+
+                            <br/>
+                            <a href="#">testing link</a>
+                            <br/>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel resources">
+                <div class="container">
+                    <div class="row">
+                        <div id="resources">
+                            <h1>Resources</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <footer class="page-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l4 s12">
+                            <p>Copyright</p>
+                        </div>
+                        <div class="col l4 s12">
+                            <p>Icons</p>
+                        </div>
+                        <div class="col l4 s12">
+                            <p>Contact</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div> <!-- End main container-->
+
+
+
+
+        <script src="assets/js/smooth-scroll.js"></script>
+        <script src="assets/js/materialize.min.js"></script>
+        <script>
+            $('.modal-trigger').leanModal();
+
+            $('.scrollAbout').on('click', function() {
+                $.smoothScroll({
+                    scrollElement: $('body'),
+                    scrollTarget: '.about'
+                });
+                return false;
+            });
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,139 @@
+@import url(https://fonts.googleapis.com/css?family=Crete+Round);
+
+/*
+Olive: #8d9e2b
+Dark Gray: #4f4f4f
+Light Gray: #d7d7d7
+Black: #1e1e1e
+*/
+
+/* GENERAL STYLES */
+body {
+    font-family: 'Roboto', serif;
+    color: #1e1e1e;
+}
+
+h1 {
+    font-family: 'Crete Round', serif;
+    color: #8d9e2b;
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
+
+h2 {
+    font-family: 'Crete Round', serif;
+    color: #4f4f4f;
+    font-size: 2em;
+}
+
+h3 {
+    font-family: 'Crete Round', serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: underline;
+    letter-spacing: 0.8px;
+}
+
+a:hover{
+    color: #8d9e2b;
+    text-decoration: none;
+}
+
+section:nth-child(even) {
+    background: #4f4f4f;
+}
+
+section:nth-child(odd) {
+    background: #ffffff;
+}
+
+/* NAV */
+nav {
+    height: 50px;
+    line-height: 50px;
+}
+
+.nav-wrapper {
+    background: #1e1e1e;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer.page-footer {
+    background: #d7d7d7;
+}
+
+/* BUTTONS */
+.btn-primary {
+    text-decoration: none;
+    color: #fff;
+    background-color: #8d9e2b;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+    height: 50px;
+    width: 250px;
+    line-height: 50px;
+    border: none;
+    border-radius: 7px;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    font-size: 1.4em;
+}
+
+.btn-primary:hover{
+    background-color: #d7d7d7;
+}
+
+.btn-secondary {
+    text-decoration: none;
+    color: #fff;
+    background-color: none;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+    height: 50px;
+    width: 250px;
+    line-height: 40px;
+    border: 5px solid #ffffff;
+    border-radius: 7px;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    font-size: 1.4em;
+}
+
+.btn-secondary:hover{
+    background-color: #8d9e2b;
+    color: #ffffff;
+}
+
+/* HOME */
+
+
+/* ABOUT */
+
+
+/* SPONSORS */
+.become-sponsor {
+    /* temp, should be image */
+    background-color: #d7d7d7;
+    padding: 25px;
+}
+
+/* FAQ*/
+
+
+/* RESOURCES */
+
+
+/* FOOTER */
