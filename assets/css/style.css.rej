@@ -1,0 +1,9 @@
+diff a/assets/css/style.css b/assets/css/style.css	(rejected hunks)
+@@ -53,7 +53,6 @@
+ }
+ 
+ /* NAV */
+-nav {
+ 
+ .navbar-fixed {
+     height: 50px;
