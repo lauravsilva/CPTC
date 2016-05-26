@@ -53,17 +53,113 @@ section:nth-child(odd) {
 }
 
 /* NAV */
-nav {
+
+.navbar-fixed {
     height: 50px;
-    line-height: 50px;
 }
 
-.nav-wrapper {
+nav {
+    
+    line-height: 50px;
     background: #1e1e1e;
+    white-space: nowrap;
 }
 
 nav a{
     text-decoration: none;
+}
+
+ul.navHeaderUl {
+    display: inline-block;
+    height: inherit;
+}
+
+ul.navHeaderUl li, ul.right li {
+    display: inline-block;
+    height: inherit;
+}
+
+#navHeader {
+    color: #8d9e2b;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    height: inherit;
+}
+
+ul.right.hide-on-med-and-down li a {
+    font-size: .85em;
+    position: relative;
+    text-decoration: none;
+}
+
+ul.right.hide-on-med-and-down li a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 25%;
+    left: 0;
+    background-color: #8d9e2b;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+ul.right.hide-on-med-and-down li a:hover:before{
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+nav a.button-collapse {
+    height: 50px;
+    line-height: 50px;
+    float: right;
+}
+
+nav .button-collapse i {
+    font-size: 1.8em;
+    padding: 0 15px 0 0;
+}
+
+/* Carousel */
+img.responsive-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -5;
+}
+
+div.carouselNavigation {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+}
+
+i.fa.fa-circle-thin, i.fa.fa-angle-left, i.fa.fa-angle-right{
+    position: absolute;
+    font-size: 4.3em;
+    color: white;
+}
+
+i.fa.fa-circle-thin.circleLeft {
+    left: 25px;
+}
+
+i.fa.fa-circle-thin.circleRight {
+    right: 25px;
+}
+
+i.fa.fa-angle-left.arrowLeft {
+    left: 38px;
+    font-size: 3.8em;
+}
+
+i.fa.fa-angle-right.arrowRight {
+    right: 38px;
+    font-size: 3.8em;
 }
 
 /* FOOTER */
@@ -137,3 +233,30 @@ footer.page-footer {
 
 
 /* FOOTER */
+
+/* Media Queries */
+@media only screen and (min-width: 0px) {
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: 50px;
+        line-height: 50px;
+    }
+}
+
+/* Hides the navName in Navigation Bar*/
+@media screen and (max-width: 430px) {
+    #navName {
+        display: none;
+    }
+}
+
+/*Carousel image can't get smaller than this*/
+@media screen and (max-width: 816px) {
+    /* Hides the navName in Navigation Bar*/
+    img.responsive-img {
+        min-height: 400px;
+        min-width: 680px;
+    }
+    div.carouselNavigation {
+        min-width: 680px;
+    }
+}

@@ -11,21 +11,18 @@
         <link rel="stylesheet" type="text/css" href="assets/css/materialize.min.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 
-        <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript">
-        </script>
+        <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+        <script type ="text/javascript" src="assets/js/functionality.js"></script>
+        
     </head>
     <body>
         <div class="navbar-fixed">
             <nav>
-                <div class="nav-wrapper persimmon">
-                    <span class="  hide-on-small-only">
-                        <a href="#!" class="brand-logo header-rit"></a>
-                    </span>
-                    <span class="hide-on-med-and-up">
-                        <a href="#!" class="header-title">Collegiate Pentesting Competition</a>
-                    </span>
-
-                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars hamburger" aria-hidden="true"></i></a>
+                    <ul class = "navHeaderUl">
+                        <li><a href="#" class="scrollHome" id = "navHeader">CPTC</a></li>
+                        <li><a href="#" class="scrollHome" id = "navName">Collegiate Pentesting Competition</a></li>
+                    </ul>
+            
                     <ul class="right hide-on-med-and-down">
                         <li><a href="#" class="scrollHome">Home</a></li>
                         <li><a href="#" class="scrollAbout">About</a></li>
@@ -33,18 +30,34 @@
                         <li><a href="#" class="scrollFAQ">FAQ</a></li>
                         <li><a href="#" class="scrollResources">Resources</a></li>
                     </ul>
+            
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars hamburger" aria-hidden="true"></i></a>
+                    <!--
                     <ul class="side-nav" id="mobile-demo">
                         <li><a href="#" class="scrollHome">Home</a></li>
                         <li><a href="#" class="scrollAbout">About</a></li>
                         <li><a href="#" class="scrollSponsors">Sponsors</a></li>
                         <li><a href="#" class="scrollFAQ">FAQ</a></li>
                         <li><a href="#" class="scrollResources">Resources</a></li>
-                    </ul>                
-                </div>
+                    </ul>
+                    -->
             </nav>
         </div>
 
+
         <div class="container container-main">
+            
+            <section class ="panel carousel">
+                <div class="col s12 clearfix">
+                    <div class = "carouselNavigation">
+                        <i class ="fa fa-circle-thin circleLeft" aria-hidden="true"></i>
+                        <i class ="fa fa-circle-thin circleRight" aria-hidden="true"></i>
+                        <i class = "fa fa-angle-left arrowLeft" aria-hidden="true"></i>
+                        <i class = "fa fa-angle-right arrowRight" aria-hidden="true"></i>
+                    </div>
+                    <img class="responsive-img carousel" src="assets/media/WJI_20151108_0518.jpg">
+                </div>
+            </section>
 
             <section class="panel home">
                 <div class="container">
