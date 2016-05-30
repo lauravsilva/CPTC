@@ -266,6 +266,7 @@ li.slide {
 /* FOOTER */
 footer.page-footer {
     background: #d7d7d7;
+    margin-top: 0;
 }
 
 /* BUTTONS */
@@ -298,7 +299,7 @@ footer.page-footer {
 
 .btn-secondary {
     text-decoration: none;
-    color: #8d9e2b;
+    color: #ffffff;
     background-color: none;
     text-align: center;
     letter-spacing: .5px;
@@ -307,7 +308,7 @@ footer.page-footer {
     height: 50px;
     width: 250px;
     line-height: 45px;
-    border: 2px solid #8d9e2b;
+    border: 2px solid #ffffff;
     border-radius: 7px;
     padding: 0 2rem;
     text-transform: uppercase;
@@ -315,8 +316,8 @@ footer.page-footer {
 }
 
 .btn-secondary:hover{
-    background-color: #8d9e2b;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #8d9e2b;
 }
 
 .btn-secondary:active{
@@ -355,8 +356,20 @@ section.panel.home {
 
 /* SPONSORS */
 .become-sponsor {
-    /* temp, should be image */
-    background-color: #d7d7d7;
+    background: url(../media/WJI_20151108_0136.jpg) no-repeat center top ;
+    height: 250px;
+    max-width: 1020px;
+}
+
+.become-sponsor p, .become-sponsor h2 {
+    color: #ffffff;
+}
+
+.sponsor-overlay{
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    width: 100%;
+    height: 100%;
     padding: 25px;
 }
 
@@ -364,7 +377,29 @@ section.panel.home {
 
 
 /* RESOURCES */
+.resources {
+    background: rgba(0, 0, 0, 0.7) url(../media/WJI_20151107_0027.jpg) no-repeat top right;
+    width: 100%;
+}
+/*
+section.resources{
+    background: #ffffff url(../media/WJI_20151107_0027.jpg) no-repeat center top;
+    width: 100%;
+    max-width: 1080px;
+}
+*/
 
+.resources-overlay{
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+}
+
+.resources ul{
+    line-height: 40px;
+}
 
 /* FOOTER */
 
@@ -398,4 +433,10 @@ section.panel.home {
 /* OTHERS */
 .block {
     display: block !important;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

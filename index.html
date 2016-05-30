@@ -50,14 +50,14 @@
             <section class ="panel carousel">
                 <div class="col s12 clearfix" id = "carouselColumn">
                     <div class = "slider-container">
-                    <ul class ="slides">
-                        <li class="slide"><img class="responsive-img carousel" src="assets/media/slider1.jpg"></li>
-                        <li class="slide"><img class="responsive-img carousel" src="assets/media/slider2.jpg"></li>
-                        <li class="slide"><img class="responsive-img carousel" src="assets/media/slider3.jpg"></li>
-                        <li class="slide"><img class="responsive-img carousel" src="assets/media/slider4.jpg"></li>
-                    </ul>
+                        <ul class ="slides">
+                            <li class="slide"><img class="responsive-img carousel" src="assets/media/slider1.jpg"></li>
+                            <li class="slide"><img class="responsive-img carousel" src="assets/media/slider2.jpg"></li>
+                            <li class="slide"><img class="responsive-img carousel" src="assets/media/slider3.jpg"></li>
+                            <li class="slide"><img class="responsive-img carousel" src="assets/media/slider4.jpg"></li>
+                        </ul>
                     </div>
-                    
+
                     <div class = "carouselNavigation">
                         <div class ="leftNav">
                             <i class ="fa fa-circle-thin circleLeft" aria-hidden="true"></i>
@@ -68,7 +68,7 @@
                             <i class ="fa fa-angle-right arrowRight" aria-hidden="true"></i>
                         </div>
                     </div>
-                    
+
                     <div class = "carouselIndicatorsContainer">
                         <ul class = "carouselIndicatorsUL">
                             <li class = "carouselIndicators" id = "indicator1"></li>
@@ -102,7 +102,7 @@
 
                         <div class="col s12">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac imperdiet metus. Donec vel metus ex. Aliquam erat volutpat. Suspendisse tempor dictum justo non laoreet. Maecenas auctor volutpat molestie. Donec quis nisl volutpat, sagittis justo sit amet, euismod nisl. Nunc laoreet dui at purus ullamcorper, vel ultrices tortor accumsan. Proin semper purus sapien, ac fermentum turpis molestie quis. Nulla non neque convallis, auctor dui a, vulputate nunc. Donec sed velit metus. Duis eu ultricies tortor. Nunc fringilla, ex sit amet interdum gravida, lorem augue tincidunt mauris, sit amet efficitur turpis enim eu tellus. Integer mollis dui et consequat aliquam. Donec congue lectus ac neque placerat, at faucibus leo cursus.</p>
-                            
+
                             <p>Donec aliquet pharetra lacus a gravida. Pellentesque cursus augue ut risus convallis, eget tempor nibh venenatis. Morbi lacinia luctus massa, eu sodales massa. Curabitur at pharetra massa. Duis non diam est. Integer sit amet venenatis tellus. Duis pellentesque elit id libero pretium, mollis posuere lorem tincidunt. Sed mattis urna ut tortor commodo tristique. Vestibulum sit amet luctus nulla, vel laoreet sapien. Donec ut nulla id quam dapibus cursus. Ut purus nunc, vehicula ut pulvinar nec, laoreet sit amet risus. Nulla sed imperdiet lorem. Morbi scelerisque, dui at faucibus imperdiet, est felis mollis tellus, ut egestas est sem id nulla. Suspendisse pulvinar arcu est, eget fermentum nisl maximus eget. Nunc at dolor ornare est fringilla eleifend eu eget felis. Cras dignissim, mi id laoreet mattis, enim neque vestibulum nibh, vitae hendrerit est ex quis dui.</p>
                         </div>
                         <div class="col s12 m4">
@@ -125,9 +125,11 @@
                             <h1>Sponsors</h1>
 
                             <div class="become-sponsor">
-                                <h2>Becoming a Sponsor</h2>
-                                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-                                <a class="waves-effect waves-light btn-secondary">Sponsor</a>
+                                <div class="sponsor-overlay">
+                                    <h2>Becoming a Sponsor</h2>
+                                    <p>For more information about becoming a sponsor, feel free to contact Paul Harris directly at pahdar@rit.edu or his office at 585-475-4992</p>
+                                    <a class="waves-effect waves-light btn-secondary center-block">Sponsor</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -152,8 +154,17 @@
             <section class="panel resources">
                 <div class="container">
                     <div class="row">
-                        <div id="resources">
-                            <h1>Resources</h1>
+                        <div class="resources">
+                            <div class="resources-overlay">
+                                <h1>Resources</h1>
+                                <ul>
+                                    <li><a href="https://www.offensive-security.com/metasploit-unleashed/" target="_blank">Metasploit Unleashed</a></li>
+                                    <li><a href="http://www.pentest-standard.org/index.php/Main_Page" target="_blank">The Penetration Testing Execution Standard</a></li>
+                                    <li><a href="https://www.owasp.org/index.php/Main_Page" target="_blank">Open Web Application Security Project</a></li>
+                                    <li><a href="http://www.room362.com/" target="_blank">Rob Fuller's Blog</a></li>
+                                    <li><a href="http://carnal0wnage.attackresearch.com/" target="_blank">Chris Gate's Blog</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -182,21 +193,21 @@
         <!-- Modals -->
         <div id="modalCaptureFlag" class="modal">
             <div class="modal-content">
-                <h4>Capture the Flag</h4>
+                <h2>Capture the Flag</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac imperdiet metus. Donec vel metus ex. Aliquam erat volutpat. Suspendisse tempor dictum justo non laoreet. Maecenas auctor volutpat molestie. Donec quis nisl volutpat, sagittis justo sit amet, euismod nisl. Nunc laoreet dui at purus ullamcorper, vel ultrices tortor accumsan. Proin semper purus sapien, ac fermentum turpis molestie quis. Nulla non neque convallis, auctor dui a, vulputate nunc. Donec sed velit metus. Duis eu ultricies tortor. Nunc fringilla, ex sit amet interdum gravida, lorem augue tincidunt mauris, sit amet efficitur turpis enim eu tellus. Integer mollis dui et consequat aliquam. Donec congue lectus ac neque placerat, at faucibus leo cursus.</p>
             </div>
         </div>
-        
+
         <div id="modalPenTest" class="modal">
             <div class="modal-content">
-                <h4>Penetration Test</h4>
+                <h2>Penetration Test</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac imperdiet metus. Donec vel metus ex. Aliquam erat volutpat. Suspendisse tempor dictum justo non laoreet. Maecenas auctor volutpat molestie. Donec quis nisl volutpat, sagittis justo sit amet, euismod nisl. Nunc laoreet dui at purus ullamcorper, vel ultrices tortor accumsan. Proin semper purus sapien, ac fermentum turpis molestie quis. Nulla non neque convallis, auctor dui a, vulputate nunc. Donec sed velit metus. Duis eu ultricies tortor. Nunc fringilla, ex sit amet interdum gravida, lorem augue tincidunt mauris, sit amet efficitur turpis enim eu tellus. Integer mollis dui et consequat aliquam. Donec congue lectus ac neque placerat, at faucibus leo cursus.</p>
             </div>
         </div>
-        
+
         <div id="modalGoals" class="modal">
             <div class="modal-content">
-                <h4>Competition Goals</h4>
+                <h2>Competition Goals</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac imperdiet metus. Donec vel metus ex. Aliquam erat volutpat. Suspendisse tempor dictum justo non laoreet. Maecenas auctor volutpat molestie. Donec quis nisl volutpat, sagittis justo sit amet, euismod nisl. Nunc laoreet dui at purus ullamcorper, vel ultrices tortor accumsan. Proin semper purus sapien, ac fermentum turpis molestie quis. Nulla non neque convallis, auctor dui a, vulputate nunc. Donec sed velit metus. Duis eu ultricies tortor. Nunc fringilla, ex sit amet interdum gravida, lorem augue tincidunt mauris, sit amet efficitur turpis enim eu tellus. Integer mollis dui et consequat aliquam. Donec congue lectus ac neque placerat, at faucibus leo cursus.</p>
             </div>
         </div>
@@ -207,10 +218,42 @@
         <script>
             $('.modal-trigger').leanModal();
 
+            $('.scrollHome').on('click', function() {
+                $.smoothScroll({
+                    scrollElement: $('body'),
+                    scrollTarget: '.carousel'
+                });
+                return false;
+            });
+            
             $('.scrollAbout').on('click', function() {
                 $.smoothScroll({
                     scrollElement: $('body'),
                     scrollTarget: '.about'
+                });
+                return false;
+            });
+            
+            $('.scrollSponsors').on('click', function() {
+                $.smoothScroll({
+                    scrollElement: $('body'),
+                    scrollTarget: '.sponsors'
+                });
+                return false;
+            });
+            
+            $('.scrollFAQ').on('click', function() {
+                $.smoothScroll({
+                    scrollElement: $('body'),
+                    scrollTarget: '.faq'
+                });
+                return false;
+            });
+            
+            $('.scrollResources').on('click', function() {
+                $.smoothScroll({
+                    scrollElement: $('body'),
+                    scrollTarget: '.resources'
                 });
                 return false;
             });
