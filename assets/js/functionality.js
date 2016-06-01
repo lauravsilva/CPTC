@@ -21,12 +21,35 @@ $(document).ready(function(){
     var indicator3 = $('#indicator3');
     var indicator4 = $('#indicator4');
     
+    //Sets the width of the arrow navigation
+    setWidth(arrowNavigation, carouselIndicators);
+    
+    //As page resizes maintain the width
+    $(window).resize(function() {
+        setWidth(arrowNavigation, carouselIndicators);
+    });
+    
     //Set initital slide indicators
     carouselIndicator(currentSlide, indicator1, indicator2, indicator3, indicator4);
     
     //Left and Right Arrow Navigation
     carouselLeft(leftNav, $carouselContainer, carouselWidth, imageWidth, animationSpeed, currentSlide);
     carouselRight(rightNav, $carouselContainer, carouselWidth, imageWidth, animationSpeed, currentSlide);
+    
+    //Click event for sideBar menu
+    $('a.button-collapse').click(toggleMenu);
+    $('div.sideBar ul li a').click(toggleMenu);
+    
+    //Closes the sideBar if user clicks outside of menu
+    $(document).mouseup(function (e) {
+        var container = $('div.sideBar');
+    
+        if (!container.is(e.target)
+            && container.has(e.target).length === 0 && $(".visible").length && 
+            e.target.getAttribute('class') != 'fa fa-bars hamburger' ){
+                container.toggleClass('visible');
+            }
+    });
 
 /* Carousel Click Left */
 function carouselLeft(leftNav, $carouselContainer, carouselWidth, imageWidth, animationSpeed) {
@@ -182,6 +205,10 @@ function carouselIndicator(currentSlide) {
     }
 }
 
+function toggleMenu() {
+    $('div.sideBar').toggleClass('visible');
+}
+
 /* Helper Functions */
 
 /* Sets the vertical margin of the carousel navigation */
@@ -189,4 +216,14 @@ function setMargin() {
     var divHeight = $('section.panel.carousel').height() / 2;
 
     $('div.carouselNavigation').css({'top' : +divHeight+'px'});
+}
+
+//Sets the navigation buttons alignment of the width
+function setWidth(arrowNavigation, carouselIndicators) {
+    var divWidth = $('div.slider-container').width();
+    
+    arrowNavigation.css({'width' : +divWidth+'px'});
+    carouselIndicators.css({'width' : +divWidth+'px'});
+    
+    
 }

@@ -11,6 +11,10 @@ Black: #1e1e1e
 body {
     font-family: 'Roboto', serif;
     color: #1e1e1e;
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none;   
 }
 
 h1 {
@@ -75,10 +79,6 @@ nav a{
 ul.navHeaderUl {
     display: inline-block;
     height: inherit;
-    -webkit-user-select: none;  
-    -moz-user-select: none;     
-    -ms-user-select: none;      
-    user-select: none;   
 }
 
 ul.navHeaderUl li, ul.right li {
@@ -97,10 +97,6 @@ ul.right.hide-on-med-and-down li a {
     font-size: .85em;
     position: relative;
     text-decoration: none;
-    -webkit-user-select: none;  
-    -moz-user-select: none;     
-    -ms-user-select: none;      
-    user-select: none;   
 }
 
 ul.right.hide-on-med-and-down li a:before {
@@ -135,14 +131,75 @@ nav .button-collapse i {
     padding: 0 15px 0 0;
 }
 
+/* Side Bar Navigation */
+div.sideBar {
+    position: fixed;
+    display: block;
+    top: 50px;
+    bottom: 0;
+    right: -401px;
+    width: 275px;
+    background-color: #ffffff;
+    z-index: 500;
+    -webkit-transition: right 0.3s linear;
+    -moz-transition: right 0.3s linear;
+    transition:right 0.3s linear;
+}
+
+div.sideBar.visible {
+    right: 0;
+    -webkit-transition: right 0.3s linear;
+    -moz-transition: right 0.3s linear;
+    transition:right 0.3s linear;
+}
+
+div.sideBar h2 {
+    text-align: center;
+    font-size: 1.8em;
+    padding-top: 20px;
+    color: #8d9e2b;
+}
+
+div.sideBar ul li {
+    list-style: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+div.sideBar ul li a {
+    color: #4f4f4f;
+    text-decoration: none;
+    font-size: 1.15em;
+    line-height: 30px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+div.sideBar ul li a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #8d9e2b;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+div.sideBar ul li a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
 /* Carousel */
 .carousel {
     height: 400px;
     padding: 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;   
 }
 
 #carouselColumn {
@@ -176,10 +233,6 @@ li.carouselIndicators {
     top: 25px;
 }
 
-li.carouselIndicators:hover {
-    background-color: white;
-}
-
 img.responsive-img {
     display: block;
     margin-left: auto;
@@ -187,8 +240,20 @@ img.responsive-img {
     z-index: -5;
 }
 
+#img1 {
+    top: -60px;
+}
+#img2 {
+    top: -150px;
+}
+#img3 {
+    top: -45px;
+}
+#img4 {
+    top: -55px;
+}
+
 div.carouselNavigation {
-    width: 100%;
     height: 60px;
     position: absolute;
 }
@@ -242,7 +307,7 @@ ul.slides {
     margin: 0;
     display: block;
     height: 400px;
-    width: 7680px;
+    width: 5120px;
 }
 
 li.slide {
@@ -415,18 +480,6 @@ section.resources{
 @media screen and (max-width: 430px) {
     #navName {
         display: none;
-    }
-}
-
-/*Carousel image can't get smaller than this*/
-@media screen and (max-width: 816px) {
-    /* Hides the navName in Navigation Bar*/
-    img.responsive-img {
-        min-height: 400px;
-        min-width: 680px;
-    }
-    div.carouselNavigation {
-        min-width: 680px;
     }
 }
 
