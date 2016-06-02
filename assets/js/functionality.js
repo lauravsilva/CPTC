@@ -6,7 +6,7 @@ $(document).ready(function(){
     //Carousel Variables
     var carouselWidth;
     var imageWidth;
-    var animationSpeed = 1500;
+    var animationSpeed = 600;
     var currentSlide = 1;   //initialize to first slide
     
     //cache DOM
@@ -22,11 +22,12 @@ $(document).ready(function(){
     var indicator4 = $('#indicator4');
     
     //Sets the width of the arrow navigation
-    setWidth(arrowNavigation, carouselIndicators);
+    setWidth(arrowNavigation,carouselIndicators,$carouselContainer,$carouselImage,currentSlide);
     
     //As page resizes maintain the width
     $(window).resize(function() {
-        setWidth(arrowNavigation, carouselIndicators);
+        setMargin();
+        setWidth(arrowNavigation,carouselIndicators,$carouselContainer,$carouselImage,currentSlide);
     });
     
     //Set initital slide indicators
@@ -34,7 +35,7 @@ $(document).ready(function(){
     
     //Left and Right Arrow Navigation
     carouselLeft(leftNav, $carouselContainer, carouselWidth, imageWidth, animationSpeed, currentSlide);
-    carouselRight(rightNav, $carouselContainer, carouselWidth, imageWidth, animationSpeed, currentSlide);
+    carouselRight(rightNav, $carouselContainer, carouselWidth, imageWidth, animationSpeed, currentSlide); 
     
     //Click event for sideBar menu
     $('a.button-collapse').click(toggleMenu);
@@ -53,11 +54,11 @@ $(document).ready(function(){
 
 /* Carousel Click Left */
 function carouselLeft(leftNav, $carouselContainer, carouselWidth, imageWidth, animationSpeed) {
-    //Declare local variables
-    imageWidth = $('li.slide').width();
-    carouselWidth = parseInt($carouselContainer.css("width"));
-    
     leftNav.click(function() {
+        //Declare local variables
+        imageWidth = $('li.slide').width();
+        carouselWidth = parseInt($carouselContainer.css("width"));
+        
         //Disable the click event from being clicked during animation
         disableNavigation();
         
@@ -79,10 +80,11 @@ function carouselLeft(leftNav, $carouselContainer, carouselWidth, imageWidth, an
 /* Carousel Click Right */
 function carouselRight(rightNav, $carouselContainer, carouselWidth, imageWidth, animationSpeed) {
     
-    carouselWidth = parseInt($carouselContainer.css("width")); //Grabs the width of the container
-    imageWidth = $('li.slide').width(); //Sets variable to image width
-    
     rightNav.click(function() {
+        //Declare local variables
+        carouselWidth = parseInt($carouselContainer.css("width")); //Grabs the width of the container
+        imageWidth = $('li.slide').width(); //Sets variable to image width
+        
         //Disable the click event from being clicked during animation
         disableNavigation();
 
@@ -213,17 +215,21 @@ function toggleMenu() {
 
 /* Sets the vertical margin of the carousel navigation */
 function setMargin() {
-    var divHeight = $('section.panel.carousel').height() / 2;
+    var divHeight = $('.carousel').height() / 2;
 
     $('div.carouselNavigation').css({'top' : +divHeight+'px'});
 }
 
 //Sets the navigation buttons alignment of the width
-function setWidth(arrowNavigation, carouselIndicators) {
+function setWidth(arrowNavigation, carouselIndicators,$carouselContainer,$carouselImage,currentSlide) {
     var divWidth = $('div.slider-container').width();
     
     arrowNavigation.css({'width' : +divWidth+'px'});
     carouselIndicators.css({'width' : +divWidth+'px'});
     
+    $carouselImage.css({'width' : +divWidth+'px'});
+    $carouselContainer.css({'width' : +(divWidth*4)+'px'});
+    
+    $carouselContainer.css({'margin-left' : -(divWidth*currentSlide-(divWidth))+'px'});
     
 }

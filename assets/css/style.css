@@ -202,8 +202,10 @@ div.sideBar ul li a:hover:before {
 
 /* Carousel */
 .carousel {
-    height: 400px;
     padding: 0;
+    /*
+    position:static;
+    */
 }
 
 #carouselColumn {
@@ -251,7 +253,7 @@ img.responsive-img {
     top: -150px;
 }
 #img3 {
-    top: -45px;
+    top: -65px;
 }
 #img4 {
     top: -55px;
@@ -301,7 +303,6 @@ div.leftNav:hover,div.rightNav:hover{
 
 div.slider-container {
     width: 100%;
-    height: 400px;
     overflow: hidden;
     z-index: 0;
     display: block;
@@ -310,7 +311,6 @@ div.slider-container {
 ul.slides {
     margin: 0;
     display: block;
-    height: 400px;
     width: 5120px;
 }
 
@@ -565,19 +565,109 @@ footer .mid {
 .row .eachContact.col {
     padding: 20px 0.75rem 0;
 }
-
 /* Media Queries */
-@media only screen and (min-width: 0px) {
-    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-        height: 50px;
-        line-height: 50px;
+
+/* Resizes carousel images */
+@media screen and (max-width: 1600px) {
+    #img1 {
+     top: -50px;   
+    }
+    #img2 {
+     top: -140px;   
+    }
+    #img3 {
+     top: -35px;   
+    }
+    #img4 {
+     top: -45px;   
     }
 }
-
+/* Resizes carousel images */
+@media screen and (max-width: 1330px) {
+    #img1 {
+     top: -20px;   
+    }
+    #img2 {
+     top: -80px;   
+    }
+    #img3 {
+     top: -15px;   
+    }
+    #img4 {
+     top: -20px;   
+    }
+}
+/* Resizes carousel images */
+@media screen and (max-width: 865px) {
+    #img1 {
+     top: 0;   
+    }
+    #img2 {
+     top: 0;   
+    }
+    #img3 {
+     top: 0;   
+    }
+    #img4 {
+     top: 0;   
+    }
+}
+/* Resizes Carousel Navigation */
+@media screen and (max-width: 723px) {
+    .carousel {
+        height: inherit;
+    }
+    i.fa.fa-circle-thin{
+        font-size: 3em;
+    }
+    i.fa.fa-angle-left.arrowLeft {
+        font-size: 2.7em;
+        left: 9px;
+    }
+    i.fa.fa-angle-right.arrowRight {
+        font-size: 2.7em;
+        right: 11px;
+    }
+    div.leftNav, div.rightNav {
+        width: 38px;
+        height: 40px;
+    }
+    li.carouselIndicators {
+        width: 10px;
+        height: 10px;
+    }
+}
 /* Hides the navName in Navigation Bar*/
 @media screen and (max-width: 430px) {
     #navName {
         display: none;
+    }
+}
+/* Resizes Carousel Navigation */
+@media screen and (max-width: 375px) {
+    i.fa.fa-circle-thin{
+        font-size: 2em;
+    }
+    i.fa.fa-angle-left.arrowLeft {
+        font-size: 1.5em;
+        left: 7px;
+        top: 2px;
+    }
+    i.fa.fa-angle-right.arrowRight {
+        font-size: 1.5em;
+        right: 7px;
+        top: 2px;
+    }
+    div.leftNav, div.rightNav {
+        width: 24px;
+        height: 28px;
+    }
+}
+/* Positions the mobile navigation symbol */
+@media only screen and (min-width: 0px) {
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: 50px;
+        line-height: 50px;
     }
 }
 
