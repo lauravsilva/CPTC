@@ -62,6 +62,10 @@ section:nth-child(odd) {
     color: #ffffff;
 }
 
+.modal {
+    background-color: #ffffff;
+}
+
 /* NAV */
 .navbar-fixed {
     height: 50px; 
@@ -328,12 +332,6 @@ li.slide {
     pointer-events: none;
 }
 
-/* FOOTER */
-footer.page-footer {
-    background: #d7d7d7;
-    margin-top: 0;
-}
-
 /* BUTTONS */
 .btn-primary {
     text-decoration: none;
@@ -352,6 +350,7 @@ footer.page-footer {
     text-transform: uppercase;
     font-size: 1.4em;
     border: 1px solid #8d9e2b;
+    margin: 15px;
 }
 
 .btn-primary:hover{
@@ -363,6 +362,34 @@ footer.page-footer {
 }
 
 .btn-secondary {
+    text-decoration: none;
+    color: #4f4f4f;
+    background-color: none;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+    height: 50px;
+    width: 250px;
+    line-height: 45px;
+    border: 2px solid #4f4f4f;
+    border-radius: 7px;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    margin: 15px;
+}
+
+.btn-secondary:hover{
+    background-color: #4f4f4f;
+    color: #ffffff;
+}
+
+.btn-secondary:active{
+    top: 1px;
+}
+
+.btn-tertiary {
     text-decoration: none;
     color: #ffffff;
     background-color: none;
@@ -378,14 +405,15 @@ footer.page-footer {
     padding: 0 2rem;
     text-transform: uppercase;
     font-size: 1.4em;
+    margin: 30px auto 10px;
 }
 
-.btn-secondary:hover{
+.btn-tertiary:hover{
     background-color: #ffffff;
     color: #8d9e2b;
 }
 
-.btn-secondary:active{
+.btn-tertiary:active{
     top: 1px;
 }
 
@@ -398,7 +426,7 @@ footer.page-footer {
     transition: .2s ease-out;
     cursor: pointer;
     height: 160px;
-    width: 100%;
+    width: 50%;
     border-radius: 7px;
     padding: 2rem;
     text-transform: uppercase;
@@ -417,12 +445,16 @@ section.panel.home {
 }
 
 /* ABOUT */
-
+.goals ul li{
+    list-style-type: circle;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
 
 /* SPONSORS */
 .become-sponsor {
     background: url(../media/WJI_20151108_0136.jpg) no-repeat center top ;
-    height: 250px;
+    height: 260px;
     max-width: 1020px;
 }
 
@@ -446,13 +478,6 @@ section.panel.home {
     background: rgba(0, 0, 0, 0.7) url(../media/WJI_20151107_0027.jpg) no-repeat top right;
     width: 100%;
 }
-/*
-section.resources{
-    background: #ffffff url(../media/WJI_20151107_0027.jpg) no-repeat center top;
-    width: 100%;
-    max-width: 1080px;
-}
-*/
 
 .resources-overlay{
     background: rgba(0, 0, 0, 0.7);
@@ -467,6 +492,79 @@ section.resources{
 }
 
 /* FOOTER */
+footer {
+    background: #d7d7d7;
+    margin: 0 auto;
+    min-height: 80px;
+}
+
+footer .row {
+    margin: 0 auto;
+}
+
+.page-footer {
+    display: table;
+    width: 100%;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+footer a {
+    color: #8d9e2b;
+}
+
+footer .left {
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+footer .right{
+    text-align: right;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+footer .mid {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.social {
+    margin: auto 20px;
+    /*
+    padding: 2px 6px;
+    border: 1px solid #4f4f4f;
+    */
+}
+
+.mid a {
+    color: #4f4f4f;
+}
+
+.mid a:hover {
+    color: #8d9e2b;
+}
+
+.copy {
+    font-size: 0.85em;
+    line-height: 0.85em;
+}
+
+.contact {
+    background: #8d9e2b;
+}
+
+.contact a:hover {
+    color: #4f4f4f;
+}
+
+.row .eachContact.col {
+    padding: 20px 0.75rem 0;
+}
 
 /* Media Queries */
 @media only screen and (min-width: 0px) {
@@ -489,7 +587,7 @@ section.resources{
 }
 
 .center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
