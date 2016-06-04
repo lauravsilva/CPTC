@@ -11,10 +11,6 @@ Black: #1e1e1e
 body {
     font-family: 'Roboto', serif;
     color: #1e1e1e;
-    -webkit-user-select: none;  
-    -moz-user-select: none;     
-    -ms-user-select: none;      
-    user-select: none;   
 }
 
 h1 {
@@ -68,7 +64,11 @@ section:nth-child(odd) {
 
 /* NAV */
 .navbar-fixed {
-    height: 50px; 
+    height: 50px;
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none;   
 }
 
 nav {
@@ -148,6 +148,10 @@ div.sideBar {
     -webkit-transition: right 0.3s linear;
     -moz-transition: right 0.3s linear;
     transition:right 0.3s linear;
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none;   
 }
 
 div.sideBar.visible {
@@ -203,9 +207,10 @@ div.sideBar ul li a:hover:before {
 /* Carousel */
 .carousel {
     padding: 0;
-    /*
-    position:static;
-    */
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none;   
 }
 
 #carouselColumn {
@@ -260,38 +265,37 @@ img.responsive-img {
 }
 
 div.carouselNavigation {
-    height: 60px;
     position: absolute;
 }
 
 i.fa.fa-circle-thin, i.fa.fa-angle-left, i.fa.fa-angle-right{
     position: absolute;
-    font-size: 4.3em;
+    font-size: 3.5em;
     color: inherit;
 }
 
 i.fa.fa-angle-left.arrowLeft {
-    left: 13px;
-    font-size: 3.8em;
+    left: 11px;
+    font-size: 3.3em;
 }
 
 i.fa.fa-angle-right.arrowRight {
-    right: 13px;
-    font-size: 3.8em;
+    right: 16px;
+    font-size: 3.3em;
 }
 
 div.leftNav {
     position: absolute;
-    width: 52px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     color: white;
     left: 25px;
 }
 
 div.rightNav {
     position: absolute;
-    width:52px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     color: white;
     right: 25px;
 }
@@ -508,7 +512,7 @@ footer .row {
 }
 
 .clearfix {
-    overflow: auto;
+    overflow: hidden;
 }
 
 footer a {
@@ -588,7 +592,7 @@ footer .mid {
      top: -20px;   
     }
     #img2 {
-     top: -80px;   
+     top: -60px;   
     }
     #img3 {
      top: -15px;   
@@ -641,6 +645,9 @@ footer .mid {
 @media screen and (max-width: 430px) {
     #navName {
         display: none;
+    }
+    h1 {
+        font-size: 1.8em;
     }
 }
 /* Resizes Carousel Navigation */
