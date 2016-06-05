@@ -34,7 +34,7 @@ h3 {
 }
 
 a {
-    color: #ffffff;
+    color: #4f4f4f;
     text-decoration: underline;
     letter-spacing: 0.8px;
 }
@@ -443,6 +443,7 @@ li.slide {
     background: none;
 }
 
+
 /* HOME */
 section.panel.home {
     text-align: center;
@@ -466,7 +467,7 @@ section.panel.home {
     color: #ffffff;
 }
 
-.sponsor-overlay{
+.sponsor-overlay {
     background: rgba(0, 0, 0, 0.7);
     position: relative;
     width: 100%;
@@ -474,17 +475,30 @@ section.panel.home {
     padding: 25px;
 }
 
+.spon-img {
+    margin: 20px 50px 50px;
+}
+
+.spon-img:hover{
+    opacity: .5;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+}
+
 /* FAQ*/
 
 
 /* RESOURCES */
 .resources {
-    background: rgba(0, 0, 0, 0.7) url(../media/WJI_20151107_0027.jpg) no-repeat top right;
+    background: url(../media/WJI_20151107_0027.jpg) no-repeat scroll top center !important;
     width: 100%;
+    padding: 0;
 }
 
 .resources-overlay{
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(255, 255, 255, 0.7);
     position: relative;
     width: 100%;
     height: 100%;
@@ -509,6 +523,9 @@ footer .row {
 .page-footer {
     display: table;
     width: 100%;
+    min-height: 80px;
+    height: 100%;
+    padding: 20px 0;
 }
 
 .clearfix {
@@ -523,18 +540,21 @@ footer .left {
     text-align: left;
     display: table-cell;
     vertical-align: middle;
+    float: none !important;
 }
 
 footer .right{
     text-align: right;
     display: table-cell;
     vertical-align: middle;
+    float: none !important;
 }
 
 footer .mid {
     text-align: center;
     display: table-cell;
     vertical-align: middle;
+    float: none !important;
 }
 
 .social {
@@ -569,51 +589,97 @@ footer .mid {
 .row .eachContact.col {
     padding: 20px 0.75rem 0;
 }
+
 /* Media Queries */
+/* Mobile */
+@media only screen and (max-device-width: 667px) 
+    and (-webkit-min-device-pixel-ratio: 2) { 
+        .btn-tertiary {
+            width: 100%;
+        }
+
+        .btn-square {
+            padding: 2em 1em;
+            height: 100%;
+            width: 100%;
+        }
+
+        .become-sponsor {
+            height: 100%;
+        }
+
+        .goals ul li {
+            margin-left: 40px;
+        }
+
+        .spon-img {
+            max-width: 400px;
+            width: 100%;
+            margin: 30px 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .page-footer, footer .left, footer .mid, footer .right {
+            display: block;
+            text-align: center;
+        }
+
+        footer .left {
+            margin-bottom: 20px;
+        }
+
+        footer .right {
+            margin-top: 20px;
+        }
+}
+
+
 
 /* Resizes carousel images */
 @media screen and (max-width: 1600px) {
     #img1 {
-     top: -50px;   
+        top: -50px;   
     }
     #img2 {
-     top: -140px;   
+        top: -140px;   
     }
     #img3 {
-     top: -35px;   
+        top: -35px;   
     }
     #img4 {
-     top: -45px;   
+        top: -45px;   
     }
 }
 /* Resizes carousel images */
 @media screen and (max-width: 1330px) {
     #img1 {
-     top: -20px;   
+        top: -20px;   
     }
     #img2 {
-     top: -60px;   
+        top: -60px;   
     }
     #img3 {
-     top: -15px;   
+        top: -15px;   
     }
     #img4 {
-     top: -20px;   
+        top: -20px;   
     }
 }
 /* Resizes carousel images */
 @media screen and (max-width: 865px) {
     #img1 {
-     top: 0;   
+        top: 0;   
     }
     #img2 {
-     top: 0;   
+        top: 0;   
     }
     #img3 {
-     top: 0;   
+        top: 0;   
     }
     #img4 {
-     top: 0;   
+        top: 0;   
     }
 }
 /* Resizes Carousel Navigation */
@@ -687,4 +753,23 @@ footer .mid {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+
+
+
+
+
+.something-semantic {
+    background: green;
+    display: table;
+    width: 100%;
+    height: 400px;
+}
+.something-else-semantic {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    float: none !important;
 }
