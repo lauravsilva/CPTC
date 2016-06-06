@@ -4,24 +4,24 @@ var FAQ = {
         {
             "preCompetition": [
                 {
-                    "question"  : ["a","b"],
-                    "answer"    : ["0","1"]
+                    "question"  : ["Can we bring software tools to the competition?","There are six members on our team. Will each of them have a system to pen test from?","One of our members is uncomfortable signing the “agreement to participate in CPTC”. Does that disqualify our whole team?","Because of travel issues, our team (or some members) cannot be there by 8am on the first day. Will that disqualify us?","We don’t have enough students to field a team of 6. Can we still participate?","Is a coach really required and has to be a faculty member?","If one of the members that we register gets sick or cannot make the event. Can we substitute another student?","Can we include a student from another school on our team?","Are graduate students allowed on the team?","What if a team member is a part-time student? What if a team member is not taking courses this semester but has not graduated yet can they participate?","If a student is working at a co-op or internship position approved by their institution, are they eligible for the team?"],
+                    "answer"    : ["No. You will be provided with everything you are allowed to use during the competition.","Yes. There will be workstations available for each of your team members to work", "That member will not be allowed to attend and participate. The rest of the team will be allowed to attend and participate without that member.","No - At least ONE person has to represent your team during the initial discussion and your time to access the infrastructure will NOT be extended.","Yes. The minimum team size is 3 members.","Yes. Every team must be sponsored by an academic institution. A faculty or staff coach affiliated with the academic institution must also accompany the team.","Yes.","No. All team members must be currently matriculated students from the same sponsoring academic institution.","Yes.","As long as they are currently matriculated in a program at your university.","Yes. If approved by their sponsoring institution."]
                 }
             ]
         },
         {
             "duringCompetition": [
                 {
-                    "question"  : ["aa", "bb"],
-                    "answer"    : ["2","3"]
+                    "question"  : ["Can our team (or some members) participate remotely?", "Will we have Internet access during the competition?", "Can we use our own laptops to perform the pen test?","Can we download data, logs, and results from the testing environment to construct our report and presentation?","Can we work through the night between the first and second day to write our final report and presentation?","Our team (or some members) needs to leave early on the last day. Will that be a problem?","After we get the RFP, is there a way for us to ask questions before or after the online Q&A session if we do not understand something?"],
+                    "answer"    : ["No. Physical attendance by all members of your team at the event site is required to participate in the competition","Yes and No. The system that we provide for you to conduct your pen test from will have internet access. The target company systems that you are pen testing may be isolated from the internet.","No. All hardware you can use will be provided for you.","Yes. You will have the capability to export resources for your analysis and report writing","Yes. You can work all night if you wish, but remember that you need to be ready and prepared to present to the “C”-level folks in the morning.","As long as someone from the team is in attendance at the awards ceremony.","Yes. An email address will be provided for submitting questions. Submitted questions and answers will be distributed to all teams."]
                 }
             ]
         },
         {
             "other": [
                 {
-                    "question"  : ["aaa","bbb"],
-                    "answer"    : ["4","5"]
+                    "question"  : ["What is a “Scope”?","What is a ROE?","So what does the pen test system look like?","If our team or member gets disqualified, is there an appeals process?","Will we get any feedback on what we did well or not so well besides the final score?","If we own legitimate licenses for commercial pen testing software, can we bring it with us to use in the competition?","What things might disqualify members our team or members?"],
+                    "answer"    : ["The pentest scope defines and details exactly what is to be tested. What targets are to be tested and which are not to be touched.","Rules of Engagement. It is a document that describes how the tests are to be conducted. It can include limitations on times, tools, and techniques that can be employed. It can also detail any restrictions imposed by the client.","You will be provided access to the hosting environment in advance to the event so that you and your team can become familiar. You will NOT get early access to the pen testing targets but you will get access to a representative target environment for practice.","No. During an actual engagement your company can be cut from a contact as a result of your behavior. This event will mirror real life as closely as possible.","Yes. Feedback about potential vulnerabilities and other considerations is intended to be provided after the event.","No. Selected commercial packages will be provided for each team at the event.","Unprofessional, rude or offensive behavior at or during the competition. Cheating, rule violations, or illegal activities."]
                 }
             ]
         }
@@ -299,7 +299,8 @@ function generatePreCompetition() {
         dataDiv.append(data);
     }
     
-    //Hide the answers
+    //Hide the arrows and answers
+    $('i.fa.fa-caret-right').hide();
     $('.answer').hide();
 }
 
@@ -311,7 +312,7 @@ function generateDuringCompetition() {
     var questions = FAQ.faqData[1].duringCompetition[0].question; //Array of questions for duringCompetition
     var answers = FAQ.faqData[1].duringCompetition[0].answer; //Array of answers for duringCompetition
     var type; //Is it a question or an answer
-    var id;   //ID of question/answer
+    
     
     dataDiv.empty(); //Clear Div
     
@@ -331,7 +332,8 @@ function generateDuringCompetition() {
         dataDiv.append(data);
     }
     
-    //Hide the answers
+    //Hide the arrows and answers
+    $('i.fa.fa-caret-right').hide();
     $('.answer').hide();
 }
 
@@ -362,15 +364,26 @@ function generateOther() {
         dataDiv.append(data);
     }
     
-    //Hide the answers
+    //Hide the arrows and answers
+    $('i.fa.fa-caret-right').hide();
     $('.answer').hide();
 }
 
 function activeAnswer() {
-    var id = $(this).attr('id').charAt($(this).attr('id').length-1); //Grabs the selected question/answer's id
+    if($(this).attr('id').length == 9) { //If it's single digit
+       var id = $(this).attr('id').charAt($(this).attr('id').length-1); //Grabs the selected question/answer's id 
+    } else { //The digit is greater than 9 grab last 2 characters
+        var id = $(this).attr('id').charAt($(this).attr('id').length-2)+$(this).attr('id').charAt($(this).attr('id').length-1);
+    }
     
-    $('.answer').hide();    //Hide previously selected answers
-    $('#answer'+id).show(); //Shows the selected answer
+    $('.selectedQuestion').toggleClass('selectedQuestion'); //Remove the old selected question
+    
+    $(this).toggleClass('selectedQuestion');           //Add class to the new selected quesiton
+    
+    $('i.fa.fa-caret-right').hide();                //Hide previous arrows
+    $('#arrow'+id).show();                          //Show current arrow
+    $('.answer').hide();                            //Hide previous answers
+    $('#answer'+id).show();                         //Show current answer
 }
 
 /* Helper Functions */
@@ -395,8 +408,14 @@ function setWidth(arrowNavigation, carouselIndicators,$carouselContainer,$carous
     $carouselContainer.css({'margin-left' : -(divWidth*currentSlide-(divWidth))+'px'});
 }
 
-//Create paragraph
+//Create paragraph with attributes
 function createPara (myText, myType, myId) {
+    if($(this).attr('id').length == 9 || $(this).attr('id').length == 7) { //If it's single digit
+       var id = $(this).attr('id').charAt($(this).attr('id').length-1); //Grabs the selected question/answer's id 
+    } else {
+        var id = $(this).attr('id').charAt($(this).attr('id').length-2)+$(this).attr('id').charAt($(this).attr('id').length-1);
+    }
+    
     if(myType == 'question') {
         return $('<p>', {
             class: myType,
@@ -405,10 +424,18 @@ function createPara (myText, myType, myId) {
             text: myText
         });
     } else {
-        return $('<p>', {
+        var arrow = $('<i>', {
+            class: 'fa fa-caret-right',
+            id: 'arrow'+id
+        });
+        
+        var answer = $('<p>', {
             class: myType,
             id: myId,
             text: myText
         });
+        
+        arrow.append(answer);
+        return arrow;
     }
 }

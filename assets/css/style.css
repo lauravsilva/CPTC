@@ -477,6 +477,10 @@ section.panel.home {
 
 .spon-img {
     margin: 20px 50px 50px;
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none;
 }
 
 .spon-img:hover{
@@ -497,7 +501,7 @@ section.panel.home {
     width: 100%;
     border: 1px solid #d7d7d7;
     margin-top: 20px;
-    padding-left: 20px;
+    padding: 10px 20px 0 20px;
 }
 
 .btn-faq-primary {
@@ -556,10 +560,29 @@ section.panel.home {
 
 .question {
     cursor: pointer;
+    margin: 0 0 12px 0;
+}
+
+.question:hover {
+    color: #8d9e2b;
+}
+
+.selectedQuestion {
+    color: #8d9e2b;
 }
 
 .answer {
-    margin-left: 25px;
+    margin: 5px 0 0 15px;
+    display: inline;
+    font-family: 'Roboto', serif;
+    color: #ffffff;
+    font-size: .8em;
+}
+
+i.fa.fa-caret-right {
+    margin: 0 0 14px 15px;
+    color: #8d9e2b;
+    font-size: 1.2em;
 }
 
 /* RESOURCES */
@@ -737,6 +760,11 @@ footer .mid {
     }
 }
 /* Resizes carousel images */
+@media screen and (max-width: 1046px) {
+    .btn-faq-primary, .btn-faq-secondary {
+        width: 220px;
+    }
+}
 @media screen and (max-width: 865px) {
     #img1 {
         top: 0;   
@@ -749,6 +777,23 @@ footer .mid {
     }
     #img4 {
         top: 0;   
+    }
+}
+/* Moves FAQ button to the left */
+@media screen and (max-width: 800px) {
+    .btn-faq-primary, .btn-faq-secondary {
+        display: block;
+    }
+    #faq1 {
+        float: none;
+        margin: 0 auto 10px auto;
+    }
+    #faq2 {
+        margin: 0 auto 10px auto;
+    }
+    #faq3 {
+        float: none;
+        margin: 0 auto 0 auto;
     }
 }
 /* Resizes Carousel Navigation */
