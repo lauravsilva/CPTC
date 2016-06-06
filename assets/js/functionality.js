@@ -1,3 +1,33 @@
+//Data for FAQ Questions
+var FAQ = {
+    "faqData" : [
+        {
+            "preCompetition": [
+                {
+                    "question"  : ["a","b"],
+                    "answer"    : ["0","1"]
+                }
+            ]
+        },
+        {
+            "duringCompetition": [
+                {
+                    "question"  : ["aa", "bb"],
+                    "answer"    : ["2","3"]
+                }
+            ]
+        },
+        {
+            "other": [
+                {
+                    "question"  : ["aaa","bbb"],
+                    "answer"    : ["4","5"]
+                }
+            ]
+        }
+    ]
+};
+
 //Acts as an onload for the script
 $(document).ready(function(){
     //Set the margin of the carousel arrows
@@ -51,6 +81,14 @@ $(document).ready(function(){
                 container.toggleClass('visible');
             }
     });
+    
+    //Click event for faq bututons
+    $('#faq1').click(faqChange);
+    $('#faq2').click(faqChange);
+    $('#faq3').click(faqChange);
+    
+    //intialize the FAQ with data
+    generatePreCompetition();
 
 /* Carousel Click Left */
 function carouselLeft(leftNav, $carouselContainer, carouselWidth, imageWidth, animationSpeed) {
@@ -211,6 +249,130 @@ function toggleMenu() {
     $('div.sideBar').toggleClass('visible');
 }
 
+//Changes the current selected faq button and questions
+function faqChange() {
+    var className = $(this).attr('class');
+    var idName = $(this).attr('id');
+    var primary = 'btn-faq-primary';
+    var secondary = 'btn-faq-secondary';
+
+    //Change the primary button
+    if(className = secondary) {
+        $('a.waves-effect.waves-light.btn-faq-primary').removeClass(primary).addClass(secondary);
+        $(this).removeClass(secondary).addClass(primary);
+    }
+    
+    //Determine which data to populate the content with
+    if(idName == 'faq1') {
+        generatePreCompetition();
+    } else if(idName == 'faq2') {
+        generateDuringCompetition();
+    } else {
+        generateOther();
+    }
+}
+
+function generatePreCompetition() {
+    //Local Variables
+    var data; //The data that needs to be put onto the dataDiv
+    var text; //Text to put in paragraph element
+    var dataDiv = $('div.faq-content-container');   //Div that contains the questions and answers
+    var questions = FAQ.faqData[0].preCompetition[0].question; //Array of questions for PreCompetition
+    var answers = FAQ.faqData[0].preCompetition[0].answer; //Array of answers for preCompetition
+    var type; //Is it a question or an answer
+    
+    dataDiv.empty(); //Clear Div
+    
+    for(i = 0; i<questions.length; i++) {
+        //questions
+        text = questions[i];     //Set the text equal to the question
+        type = 'question';       //Set the type of data being sent
+        id = 'question'+i;       //Set the id to the current question
+        data = createPara(text,type, id); //New paragraph
+        dataDiv.append(data);    //Add the paragraph tag to the div
+        
+        //answers
+        text = answers[i];
+        type = 'answer';
+        id = 'answer'+i;
+        data = createPara(text,type, id);
+        dataDiv.append(data);
+    }
+    
+    //Hide the answers
+    $('.answer').hide();
+}
+
+function generateDuringCompetition() {
+    //Local Variables
+    var data; //The data that needs to be put onto the dataDiv
+    var text; //Text to put in paragraph element
+    var dataDiv = $('div.faq-content-container');
+    var questions = FAQ.faqData[1].duringCompetition[0].question; //Array of questions for duringCompetition
+    var answers = FAQ.faqData[1].duringCompetition[0].answer; //Array of answers for duringCompetition
+    var type; //Is it a question or an answer
+    var id;   //ID of question/answer
+    
+    dataDiv.empty(); //Clear Div
+    
+    for(i = 0; i<questions.length; i++) {
+        //questions
+        text = questions[i];     //Set the text equal to the question
+        type = 'question';       //Set the type of data being sent
+        id = 'question'+i;       //Set the id to the current question
+        data = createPara(text,type, id); //New paragraph
+        dataDiv.append(data);    //Add the paragraph tag to the div
+        
+        //answers
+        text = answers[i];
+        type = 'answer';
+        id = 'answer'+i;
+        data = createPara(text,type, id);
+        dataDiv.append(data);
+    }
+    
+    //Hide the answers
+    $('.answer').hide();
+}
+
+function generateOther() {
+    //Local Variables
+    var data; //The data that needs to be put onto the dataDiv
+    var text; //Text to put in paragraph element
+    var dataDiv = $('div.faq-content-container');
+    var questions = FAQ.faqData[2].other[0].question; //Array of questions for PreCompetition
+    var answers = FAQ.faqData[2].other[0].answer; //Array of answers for duringCompetition
+    var type; //Is it a question or an answer
+    
+    dataDiv.empty(); //Clear Div
+    
+    for(i = 0; i<questions.length; i++) {
+        //questions
+        text = questions[i];     //Set the text equal to the question
+        type = 'question';       //Set the type of data being sent
+        id = 'question'+i;       //Set the id to the current question
+        data = createPara(text,type, id); //New paragraph
+        dataDiv.append(data);    //Add the paragraph tag to the div
+        
+        //answers
+        text = answers[i];
+        type = 'answer';
+        id = 'answer'+i;
+        data = createPara(text,type, id);
+        dataDiv.append(data);
+    }
+    
+    //Hide the answers
+    $('.answer').hide();
+}
+
+function activeAnswer() {
+    var id = $(this).attr('id').charAt($(this).attr('id').length-1); //Grabs the selected question/answer's id
+    
+    $('.answer').hide();    //Hide previously selected answers
+    $('#answer'+id).show(); //Shows the selected answer
+}
+
 /* Helper Functions */
 
 /* Sets the vertical margin of the carousel navigation */
@@ -231,5 +393,22 @@ function setWidth(arrowNavigation, carouselIndicators,$carouselContainer,$carous
     $carouselContainer.css({'width' : +(divWidth*4)+'px'});
     
     $carouselContainer.css({'margin-left' : -(divWidth*currentSlide-(divWidth))+'px'});
-    
+}
+
+//Create paragraph
+function createPara (myText, myType, myId) {
+    if(myType == 'question') {
+        return $('<p>', {
+            class: myType,
+            id: myId,
+            click: activeAnswer,
+            text: myText
+        });
+    } else {
+        return $('<p>', {
+            class: myType,
+            id: myId,
+            text: myText
+        });
+    }
 }

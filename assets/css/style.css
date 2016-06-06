@@ -488,7 +488,79 @@ section.panel.home {
 }
 
 /* FAQ*/
+.faq-button-container {
+    text-align: center;
+}
 
+.faq-content-container {
+    height: auto;
+    width: 100%;
+    border: 1px solid #d7d7d7;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.btn-faq-primary {
+    text-decoration: none;
+    color: #fff;
+    background-color: #8d9e2b;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+    height: 48px;
+    width: 240px;
+    line-height: 48px;
+    border: none;
+    border-radius: 7px;
+    padding: 0 2rem;
+    font-size: 1.2em;
+    border: 1px solid #8d9e2b;
+    display: inline-block;
+}
+
+.btn-faq-primary:hover {
+    background: none;
+}
+
+.btn-faq-secondary {
+    text-decoration: none;
+    color: black;
+    background-color: #d7d7d7;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+    height: 48px;
+    width: 240px;
+    line-height: 48px;
+    border: none;
+    border-radius: 7px;
+    padding: 0 2rem;
+    font-size: 1.2em;
+    border: 1px solid #d7d7d7;
+    display: inline-block;
+}
+
+.btn-faq-secondary:hover {
+    background: none;
+}
+
+#faq1 {
+    float: left;
+}
+
+#faq3 {
+    float: right;
+}
+
+.question {
+    cursor: pointer;
+}
+
+.answer {
+    margin-left: 25px;
+}
 
 /* RESOURCES */
 .resources {
@@ -634,9 +706,6 @@ footer .mid {
             margin-top: 20px;
         }
 }
-
-
-
 /* Resizes carousel images */
 @media screen and (max-width: 1600px) {
     #img1 {
@@ -754,13 +823,6 @@ footer .mid {
     margin-left: auto;
     margin-right: auto;
 }
-
-
-
-
-
-
-
 .something-semantic {
     background: green;
     display: table;
