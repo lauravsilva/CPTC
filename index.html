@@ -7,6 +7,9 @@
 
         <title>CPTC</title>
 
+        <link rel="shortcut icon" href="assets/media/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="assets/media/favicon.ico" type="image/x-icon">
+
         <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/materialize.min.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
@@ -19,7 +22,7 @@
         <div class="navbar-fixed">
             <nav>
                 <ul class = "navHeaderUl">
-                    <li><a href="#" class="scrollHome" id = "navHeader">CPTC</a></li>
+                    <li><a href="#" class="scrollHome" id = "navHeader"><img src="assets/media/cptc_logo_mini.png" alt="CPTC Logo" class="logo"/></a></li>
                     <li><a href="#" class="scrollHome" id = "navName">Collegiate Pentesting Competition</a></li>
                 </ul>
 
@@ -36,7 +39,6 @@
         </div>
 
         <div class="sideBar">
-            <h2>Navigation</h2>
             <ul>
                 <li><a href="#" class="scrollHome">Home</a></li>
                 <li><a href="#" class="scrollAbout">About</a></li>
@@ -89,10 +91,13 @@
                     <div class="row">
                         <div class="col s12 clearfix">
                             <h1>The <strong>Second</strong> Inter-Collegiate Penetration Testing Competition</h1>
-                            <p>RIT will host the second collegiate-level pentration testing competition open to university partners on <b>November 4 - 6, 2017</b></p>
+                            <h5>RIT will host the second collegiate-level pentration testing competition open to university partners on <strong>November 4 - 6, 2017</strong></h5>
+                            
+                            <img src="assets/media/cptc_logo.jpg" alt="CPTC Logo" class="main-logo"/>
+                            
                             <p>Do you want to test yourself against a variety of challenges Security Consultants face every day?</p>
                             <a class="waves-effect waves-light btn-primary" target="_blank" href="https://docs.google.com/forms/d/1_23bStOgnQ8p7CRgAAq6ONR6WDt6-ufUmEbUI5RcHsc/viewform">Sign Up</a>
-                            <!--<a class="waves-effect waves-light btn-secondary center-block">Sponsor</a>-->
+                            <a class="waves-effect waves-light btn-secondary">Sponsor</a>
                         </div>
                     </div>
                 </div>
@@ -106,28 +111,28 @@
                         </div>
 
                         <div class="col s12">
-                            <p>Cyber security events, such as a CTF, vulnerability assessment, auditing, or Pen testing, share many characteristics. All of them exercise a competitor’s understanding of how things work, knowledge of why systems function the way they do, and their skill in manipulating a systems function. They test and assess a contestant’s proficiency in the field of computing and cyber security. </p>
+                            <h6>Our goal for this event is to model a real life penetration test as closely as possible in a competition environment.
+                            </h6>
 
-                            <p>The differences are starker. Security audits are a co-operative effort reviewing policies, procedures, and regulations to determine if a company is in compliance with those requirements and limitations. The auditors and the company are aware of each other and co-operate in the best interest of the company. These are often in the form of surveys, questionnaires, and examinations. A checklist is a typical component in an audit as is a review of software version and patch level checking.</p> 
+                            <p>Cyber security events, such as a CTF, vulnerability assessment, auditing, or Pen testing, share many characteristics. All of them exercise a competitor’s understanding of how things work, knowledge of why systems function the way they do, and their skill in manipulating a systems function. They test and assess a contestant’s proficiency in the field of computing and cyber security.</p>
 
-                            <p>Vulnerability assessments are co-operative and validate the existence of those vulnerabilities suggested by an audit. Exploits for missing patches, out of date software versions, or unauthorized software is tested to verify that they violate the security of a system. </p>
-
-                            <p>Capture the Flag (CTF) exercises are not co-operative. The company does not share or assist the attacker. Unique to this category is that there are typically one (or a few) known targets (flags) on the victim and the attacker need only discover a single attack vector to accomplish access to the flag. The distinguishing factor for a CTF is the effect on the target systems. In a CTF there is little or no care or concern for the state the system is left in or the damage done to the target as a result of offensive activity. </p>
-
-                            <p>Finally a penetration testing event (PT) is co-operative, whether it’s a black box test (when very little information is shared) or a crystal box test (when a lot of insider information is shared). Two characteristics discriminate a PT from other tests. First, a PT picks up where a vulnerability assessment of an exploit ends. The goal is to see how far and to what extent the vulnerability threatens the company and what resources are exposed. A vulnerability assessment might discover that a cheap, easily pick-able lockset is used on your home, pick the lock to verify, and stop there. A PT would continue on a demonstrate that your TV, stereo, and jewelry box could be taken. Alternatively, the lockset could be less of a concern because the door only leads to the back porch and the next door to the house has a very good lock, minimizing the threat of the weak exterior door lock.</p>
-
-                            <p>Second, unlike the CTF, the goal of a PT is to protect and improve the security of the company. The PT should do no harm. The system should not be damaged. The company’s operation or reputation should not be negatively impacted. Any and all vulnerabilities found need to be clearly documented with a mitigation plan provided to the customer for their benefit. While a CTF needs only to find a single successful exploit to gain the flag, a PT strives to find ALL (or at least as many as possible) weaknesses, vulnerabilities, and leaks in a system. This makes a PT a much more demanding exercise. A PT should not stop at the first successful breach, but continue searching for any known vulnerabilities possible in the target system. </p>
+                            <p><strong>A penetration testing event (PT) is cooperative, whether it’s a black box test (when very little information is shared) or a crystal box test (when a lot of insider information is shared).</strong> Two characteristics discriminate a PT from other tests:</p>
+                            <ol class="about-list">
+                                <li>
+                                    A PT picks up where a vulnerability assessment of an exploit ends. The goal is to see how far and to what extent the vulnerability threatens the company and what resources are exposed. A vulnerability assessment might discover that a cheap, easily pick-able lockset is used on your home, pick the lock to verify, and stop there. A PT would continue on a demonstrate that your TV, stereo, and jewelry box could be taken. Alternatively, the lockset could be less of a concern because the door only leads to the back porch and the next door to the house has a very good lock, minimizing the threat of the weak exterior door lock.
+                                </li>
+                                <li>
+                                    Unlike the CTF, the goal of a PT is to protect and improve the security of the company. The PT should do no harm. The system should not be damaged. The company’s operation or reputation should not be negatively impacted. Any and all vulnerabilities found need to be clearly documented with a mitigation plan provided to the customer for their benefit. While a CTF needs only to find a single successful exploit to gain the flag, a PT strives to find ALL (or at least as many as possible) weaknesses, vulnerabilities, and leaks in a system. This makes a PT a much more demanding exercise. A PT should not stop at the first successful breach, but continue searching for any known vulnerabilities possible in the target system.
+                                </li>
+                            </ol>
                         </div>
-                        <!--
-<div class="col s12 m4">
-<a class="waves-effect waves-light btn-square modal-trigger" href="#modalCaptureFlag"><i class="fa fa-flag fa-4x block" aria-hidden="true"></i>Capture the Flag</a>
-</div>
-<div class="col s12 m4">
-<a class="waves-effect waves-light btn-square modal-trigger" href="#modalPenTest"><i class="fa fa-database fa-4x block" aria-hidden="true"></i>Penetration Testing</a>
-</div>
--->
-                        <div class="col s12 m12">
-                            <a class="waves-effect waves-light btn-square modal-trigger center-block" href="#modalGoals"><i class="fa fa-trophy fa-4x block" aria-hidden="true"></i>Competition Goals</a>
+
+                        <div class="col s12 m6">
+                            <a class="waves-effect waves-light btn-square modal-trigger center-block" href="#modalPTvs"><i class="fa fa-database fa-4x block" aria-hidden="true"></i>PT vs. Others</a>
+                        </div>
+
+                        <div class="col s12 m6">
+                            <a class="waves-effect waves-light btn-square modal-trigger center-block" href="#modalGoals"><i class="fa fa-trophy fa-4x block" aria-hidden="true"></i>Event Details</a>
                         </div>
                     </div>
                 </div>
@@ -214,22 +219,27 @@
 
 
         <!-- Modals -->
-        <div id="modalCaptureFlag" class="modal">
+        <div id="modalPTvs" class="modal">
             <div class="modal-content">
-                <h2>Capture the Flag</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac imperdiet metus. Donec vel metus ex. Aliquam erat volutpat. Suspendisse tempor dictum justo non laoreet. Maecenas auctor volutpat molestie. Donec quis nisl volutpat, sagittis justo sit amet, euismod nisl. Nunc laoreet dui at purus ullamcorper, vel ultrices tortor accumsan. Proin semper purus sapien, ac fermentum turpis molestie quis. Nulla non neque convallis, auctor dui a, vulputate nunc. Donec sed velit metus. Duis eu ultricies tortor. Nunc fringilla, ex sit amet interdum gravida, lorem augue tincidunt mauris, sit amet efficitur turpis enim eu tellus. Integer mollis dui et consequat aliquam. Donec congue lectus ac neque placerat, at faucibus leo cursus.</p>
-            </div>
-        </div>
+                <span class="right"><a href="#!" class="modal-action modal-close x-close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a></span>
+                
+                <h2>PT vs. Others</h2>
+                
+                <p><strong class="olive">Penetration Testing</strong> is cooperative and focuses on improving the security of a company by understanding the vulnerabilities.</p>
+                
+                <p><strong class="olive">Security audits</strong> are a cooperative effort reviewing policies, procedures, and regulations to determine if a company is in compliance with those requirements and limitations. The auditors and the company are aware of each other and cooperate in the best interest of the company. These are often in the form of surveys, questionnaires, and examinations. A checklist is a typical component in an audit as is a review of software version and patch level checking.</p>
 
-        <div id="modalPenTest" class="modal">
-            <div class="modal-content">
-                <h2>Penetration Test</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac imperdiet metus. Donec vel metus ex. Aliquam erat volutpat. Suspendisse tempor dictum justo non laoreet. Maecenas auctor volutpat molestie. Donec quis nisl volutpat, sagittis justo sit amet, euismod nisl. Nunc laoreet dui at purus ullamcorper, vel ultrices tortor accumsan. Proin semper purus sapien, ac fermentum turpis molestie quis. Nulla non neque convallis, auctor dui a, vulputate nunc. Donec sed velit metus. Duis eu ultricies tortor. Nunc fringilla, ex sit amet interdum gravida, lorem augue tincidunt mauris, sit amet efficitur turpis enim eu tellus. Integer mollis dui et consequat aliquam. Donec congue lectus ac neque placerat, at faucibus leo cursus.</p>
+                <p><strong class="olive">Vulnerability assessments</strong> are co-operative and validate the existence of those vulnerabilities suggested by an audit. Exploits for missing patches, out of date software versions, or unauthorized software is tested to verify that they violate the security of a system.</p>
+                
+                <p><strong class="olive">Capture the Flag (CTF)</strong> exercises are not cooperative. The company does not share or assist the attacker. Unique to this category is that there are typically one (or a few) known targets (flags) on the victim and the attacker need only discover a single attack vector to accomplish access to the flag. The distinguishing factor for a CTF is the effect on the target systems. In a CTF there is little or no care or concern for the state the system is left in or the damage done to the target as a result of offensive activity.
+                </p>        
             </div>
         </div>
 
         <div id="modalSponsors" class="modal">
             <div class="modal-content">
+                <span class="right"><a href="#!" class="modal-action modal-close x-close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a></span>
+
                 <h2>Past Sponsors</h2>
 
                 <a href="http://logicaloperations.com/certifications/1/">
@@ -246,9 +256,11 @@
 
         <div id="modalGoals" class="modal">
             <div class="modal-content goals">
-                <h2>Competition Goals</h2>
+                <span class="right"><a href="#!" class="modal-action modal-close x-close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a></span>
+
+                <h2>Event Details</h2>
                 <p>
-                    Our goal for this event is to model a real life penetration test as closely as possible in a competition environment. The phases of the event that you can expect are: 
+                    The phases of the event that you can expect are: 
                 </p>
 
 
@@ -285,6 +297,7 @@
 
         <div id="modalContact" class="modal">
             <div class="modal-content contact">
+                <span class="right"><a href="#!" class="modal-action modal-close x-close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a></span>
                 <h2>Contact</h2>
                 <h3>Got questions?</h3>
                 <p>Contact us below for further information about how you can get involved as a sponsor, competitor, or volunteer today!</p>

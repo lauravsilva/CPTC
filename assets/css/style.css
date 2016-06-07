@@ -33,6 +33,18 @@ h3 {
     font-size: 1.3em;
 }
 
+h5 {
+    font-size: 1.5em;
+    line-height: 1.6em;
+}
+
+h6 {
+    font-size: 1.1em;
+    line-height: 1.2em;
+    color: #d7d7d7;
+    margin: auto 0 30px;
+}
+
 a {
     color: #4f4f4f;
     text-decoration: underline;
@@ -60,6 +72,14 @@ section:nth-child(odd) {
 
 .modal {
     background-color: #ffffff;
+}
+
+strong {
+    letter-spacing: 0.6px;
+}
+
+.olive {
+    color: #8d9e2b;
 }
 
 /* NAV */
@@ -91,10 +111,8 @@ ul.navHeaderUl li, ul.right li {
 }
 
 #navHeader {
-    color: #8d9e2b;
-    font-size: 1.8em;
-    letter-spacing: 1px;
     height: inherit;
+    padding-right: 0;
 }
 
 ul.right.hide-on-med-and-down li a {
@@ -135,6 +153,10 @@ nav .button-collapse i {
     padding: 0 15px 0 0;
 }
 
+.logo {
+    height: 70%;
+    vertical-align: middle;
+}
 /* Side Bar Navigation */
 div.sideBar {
     position: fixed;
@@ -339,7 +361,7 @@ li.slide {
 /* BUTTONS */
 .btn-primary {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     background-color: #8d9e2b;
     text-align: center;
     letter-spacing: .5px;
@@ -375,7 +397,7 @@ li.slide {
     cursor: pointer;
     height: 50px;
     width: 250px;
-    line-height: 45px;
+    line-height: 50px;
     border: 2px solid #4f4f4f;
     border-radius: 7px;
     padding: 0 2rem;
@@ -430,7 +452,7 @@ li.slide {
     transition: .2s ease-out;
     cursor: pointer;
     height: 160px;
-    width: 50%;
+    width: 80%;
     border-radius: 7px;
     padding: 2rem;
     text-transform: uppercase;
@@ -443,10 +465,18 @@ li.slide {
     background: none;
 }
 
+.btn-square .fa {
+    margin-bottom: 10px;
+}
 
 /* HOME */
 section.panel.home {
     text-align: center;
+}
+
+.main-logo {
+    max-width: 80%;
+    margin: 30px auto;
 }
 
 /* ABOUT */
@@ -454,6 +484,12 @@ section.panel.home {
     list-style-type: circle;
     margin-left: 60px;
     margin-bottom: 20px;
+    line-height: 150%;
+}
+
+.about-list li {
+    margin: auto auto 20px 20px;
+    line-height: 160%;
 }
 
 /* SPONSORS */
@@ -461,6 +497,7 @@ section.panel.home {
     background: url(../media/WJI_20151108_0136.jpg) no-repeat center top ;
     height: 260px;
     max-width: 1020px;
+    text-align: center;
 }
 
 .become-sponsor p, .become-sponsor h2 {
@@ -678,7 +715,7 @@ footer .mid {
 }
 
 .contact a:hover {
-    color: #4f4f4f;
+    color: #ffffff;
 }
 
 .row .eachContact.col {
@@ -715,7 +752,7 @@ footer .mid {
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .page-footer, footer .left, footer .mid, footer .right {
             display: block;
             text-align: center;
