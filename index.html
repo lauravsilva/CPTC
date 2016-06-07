@@ -34,7 +34,7 @@
                     <li><a href="#" class="scrollResources">Resources</a></li>
                 </ul>
 
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars hamburger" aria-hidden="true"></i></a>
+                <a data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars hamburger" aria-hidden="true"></i></a>
             </nav> 
         </div>
 
@@ -97,7 +97,7 @@
                             
                             <p>Do you want to test yourself against a variety of challenges Security Consultants face every day?</p>
                             <a class="waves-effect waves-light btn-primary" target="_blank" href="https://docs.google.com/forms/d/1_23bStOgnQ8p7CRgAAq6ONR6WDt6-ufUmEbUI5RcHsc/viewform">Sign Up</a>
-                            <a class="waves-effect waves-light btn-secondary">Sponsor</a>
+                            <a class="waves-effect waves-light btn-secondary scrollFAQ">Sponsor</a>
                         </div>
                     </div>
                 </div>
@@ -143,14 +143,14 @@
                     <div class="row">
                         <div class="col s12 clearfix">
                             <h1>Sponsors</h1>
-
-                            <a href="http://www.ibm.com/us-en/" target="_blank">
+                            <div class = "sponsorContainer">
+                                <a href="http://www.ibm.com/us-en/" target="_blank">
                                 <img src="assets/media/ibm.jpg" alt="IBM" class="spon-img"/>
-                            </a>
-                            <a href="http://www.rit.edu/gccis/computingsecurity/" target="_blank">
+                                </a>
+                                <a href="http://www.rit.edu/gccis/computingsecurity/" target="_blank">
                                 <img src="assets/media/CSEC.png" alt="Computing Security at RIT" class="spon-img"/>
-                            </a>
-
+                                </a>
+                            </div>
                             <div class="become-sponsor center-block">
                                 <div class="sponsor-overlay">
                                     <h2>Becoming a Sponsor</h2>
@@ -172,6 +172,7 @@
                             <a class="waves-effect waves-light btn-faq-secondary" id = "faq2">During Competition</a>
                             <a class="waves-effect waves-light btn-faq-secondary" id = "faq3">Others</a>
                         </div>
+                        <p class = 'faqBlurb'>Click on a question to reveal the answer</p>
                         <div class = "faq-content-container">
                         </div>
                     </div>
@@ -205,7 +206,7 @@
                             </div>
                             <div class="col s12 m4 mid">
                                 <a target="_blank" href="https://www.facebook.com/NCPTC/"><i class="fa fa-facebook-square fa-3x social" aria-hidden="true"></i></a>
-                                <a target="_blank" href=""><i class="fa fa-google-plus-square fa-3x social" aria-hidden="true"></i></a>
+                                <a target="_blank" href="https://plus.google.com/share?url=http%3A//cptc.csec.rit.edu/"><i class="fa fa-google-plus-square fa-3x social" aria-hidden="true"></i></a>
                             </div>
                             <div class="col s12 m4 right">
                                 <a class="waves-effect waves-light modal-trigger" href="#modalContact">Contact Us</a>
@@ -298,7 +299,7 @@
         <div id="modalContact" class="modal">
             <div class="modal-content contact">
                 <span class="right"><a href="#!" class="modal-action modal-close x-close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a></span>
-                <h2>Contact</h2>
+                <h2 class = 'leftText'>Contact</h2>
                 <h3>Got questions?</h3>
                 <p>Contact us below for further information about how you can get involved as a sponsor, competitor, or volunteer today!</p>
 

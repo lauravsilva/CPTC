@@ -82,6 +82,9 @@ $(document).ready(function(){
             }
     });
     
+    //Initialize the blurb fade
+    fadeBlurb();
+    
     //Click event for faq bututons
     $('#faq1').click(faqChange);
     $('#faq2').click(faqChange);
@@ -386,13 +389,22 @@ function activeAnswer() {
     $('#answer'+id).show();                         //Show current answer
 }
 
+//Fades the faqBlurb in and out
+function fadeBlurb() {
+    $('.faqBlurb').fadeIn(1500).delay(2000).fadeOut(1500, function() {
+        fadeBlurb();
+    });
+}
+
 /* Helper Functions */
 
 /* Sets the vertical margin of the carousel navigation */
 function setMargin() {
-    var divHeight = $('.carousel').height() / 2;
-
-    $('div.carouselNavigation').css({'top' : +divHeight+'px'});
+    $(document).ready(function() {
+       var divHeight = $('.carousel').height()/2;
+       $('div.carouselNavigation').css({'top' : +divHeight+'px'}); 
+    });
+    
 }
 
 //Sets the navigation buttons alignment of the width

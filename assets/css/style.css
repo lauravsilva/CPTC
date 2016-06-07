@@ -82,6 +82,10 @@ strong {
     color: #8d9e2b;
 }
 
+.leftText {
+    text-align: left;
+}
+
 /* NAV */
 .navbar-fixed {
     height: 50px;
@@ -146,6 +150,7 @@ nav a.button-collapse {
     height: 50px;
     line-height: 50px;
     float: right;
+    cursor: pointer;
 }
 
 nav .button-collapse i {
@@ -512,6 +517,10 @@ section.panel.home {
     padding: 25px;
 }
 
+.sponsorContainer {
+    text-align: center;
+}
+
 .spon-img {
     margin: 20px 50px 50px;
     -webkit-user-select: none;  
@@ -593,6 +602,10 @@ section.panel.home {
 
 #faq3 {
     float: right;
+}
+
+.faqBlurb {
+    text-align: center;
 }
 
 .question {
@@ -722,6 +735,12 @@ footer .mid {
     padding: 20px 0.75rem 0;
 }
 
+/* Modals */
+div.modal-content.contact {
+    text-align: center;
+}
+
+
 /* Media Queries */
 /* Mobile */
 @media only screen and (max-device-width: 667px) 
@@ -820,6 +839,7 @@ footer .mid {
 @media screen and (max-width: 800px) {
     .btn-faq-primary, .btn-faq-secondary {
         display: block;
+        width: 100%;
     }
     #faq1 {
         float: none;
@@ -865,6 +885,9 @@ footer .mid {
     }
     h1 {
         font-size: 1.8em;
+    }
+    h5 {
+        font-size: 1.1em;
     }
 }
 /* Resizes Carousel Navigation */
