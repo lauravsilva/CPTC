@@ -496,11 +496,16 @@ section.panel.home {
 .about-list li {
     margin: auto auto 20px 20px;
     line-height: 160%;
+    font-size: .875em;
 }
 
 .description{
-    font-size: 1.1em;
+    font-size: .875em;
     margin: 30px auto 20px;
+}
+
+.aboutDesc {
+    font-size: .875em;
 }
 
 /* SPONSORS */
