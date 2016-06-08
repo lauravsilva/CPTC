@@ -40,7 +40,7 @@ h5 {
 }
 
 h6 {
-    font-size: 1.1em;
+    font-size: 1.26em;
     line-height: 1.2em;
     color: #d7d7d7;
     margin: auto 0 30px;
@@ -498,6 +498,11 @@ section.panel.home {
     line-height: 160%;
 }
 
+.description{
+    font-size: 1.1em;
+    margin: 30px auto 20px;
+}
+
 /* SPONSORS */
 .become-sponsor {
     background: url(../media/WJI_20151108_0136.jpg) no-repeat center top ;
@@ -638,7 +643,7 @@ i.fa.fa-caret-right {
 
 /* RESOURCES */
 .resources {
-    background: url(../media/WJI_20151107_0027.jpg) no-repeat scroll top center !important;
+    background: url(../media/WJI_20151107_0630.jpg) no-repeat scroll center center !important;
     width: 100%;
     padding: 0;
 }
