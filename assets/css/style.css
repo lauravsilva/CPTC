@@ -11,6 +11,7 @@ Black: #1e1e1e
 body {
     font-family: 'Roboto', serif;
     color: #1e1e1e;
+    overflow-x: hidden;
 }
 
 h1 {
