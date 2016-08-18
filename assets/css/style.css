@@ -485,6 +485,12 @@ section.panel.home {
     margin: 30px auto;
 }
 
+.reg-details {
+    text-align: left;
+    font-size: 0.85em;
+    line-height: 1.8em;
+}
+
 /* ABOUT */
 .goals ul li{
     list-style-type: circle;
