@@ -514,6 +514,10 @@ section.panel.home {
     font-size: .92em;
 }
 
+#youtubeVideo {
+    text-align: center;
+}
+
 /* SPONSORS */
 .become-sponsor {
     background: url(../media/WJI_20151108_0136.jpg) no-repeat center top ;
