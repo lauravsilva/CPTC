@@ -29,6 +29,7 @@
                 <li><a href="#" class="scrollAbout">About</a></li>
                 <li><a href="#" class="scrollSponsors">Sponsors</a></li>
                 <li><a href="#" class="scrollFAQ">FAQ</a></li>
+                <li><a href="#" class="scrollComp">2016 Competitors</a></li>
                 <li><a href="#" class="scrollResources">Resources</a></li>
             </ul> <a data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars hamburger" aria-hidden="true"></i></a> </nav>
     </div>
@@ -38,6 +39,7 @@
             <li><a href="#" class="scrollAbout">About</a></li>
             <li><a href="#" class="scrollSponsors">Sponsors</a></li>
             <li><a href="#" class="scrollFAQ">FAQ</a></li>
+            <li><a href="#" class="scrollComp">2016 Competitors</a></li>
             <li><a href="#" class="scrollResources">Resources</a></li>
         </ul>
     </div>
@@ -138,6 +140,27 @@
                     <div class="faq-button-container"> <a class="waves-effect waves-light btn-faq-primary" id="faq1">Pre-Competition</a> <a class="waves-effect waves-light btn-faq-secondary" id="faq2">During Competition</a> <a class="waves-effect waves-light btn-faq-secondary" id="faq3">Others</a> </div>
                     <p class='faqBlurb'>Click on a question to reveal the answer</p>
                     <div class="faq-content-container"> </div>
+                </div>
+            </div>
+        </section>
+        <section class="panel competitors">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 clearfix">
+                        <h1>2016 Competitors</h1>
+                        <div class="competitorsContainer">
+                            <img src="assets/media/calpoly.jpg" alt="Cal Poly Pomona Logo" class="comp-logo" />
+                            <img src="assets/media/ccsf.png" alt="City College of San Francisco Logo" class="comp-logo" />
+                            <img src="assets/media/penn.png" alt="Penn State Logo" class="comp-logo" />
+                            <img src="assets/media/rit.jpg" alt="Rochester Institute of Technology Logo" class="comp-logo" />
+                            <img src="assets/media/ttech.jpg" alt="Tennessee Technological University Logo" class="comp-logo" />
+                            <img src="assets/media/ub.png" alt="University of Buffalo Logo" class="comp-logo" />
+                            <img src="assets/media/ucf.jpg" alt="University of Central Florida Logo" class="comp-logo" />
+                            <img src="assets/media/maine.png" alt="University of Maine Logo" class="comp-logo" />
+                            <img src="assets/media/unh.jpg" alt="University of New Haven Logo" class="comp-logo" />
+                            <img src="assets/media/utsa.png" alt="University of Texas at San Antonio Logo" class="comp-logo" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -257,6 +280,13 @@
             $.smoothScroll({
                 scrollElement: $('html, body')
                 , scrollTarget: '.faq'
+            });
+            return false;
+        });
+        $('.scrollComp').on('click', function () {
+            $.smoothScroll({
+                scrollElement: $('html, body')
+                , scrollTarget: '.competitors'
             });
             return false;
         });
