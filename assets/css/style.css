@@ -765,6 +765,11 @@ footer .mid {
     padding: 20px 0.75rem 0;
 }
 
+
+.winners{
+    margin: 50px auto 70px;
+}
+
 /* Modals */
 div.modal-content.contact {
     text-align: center;
